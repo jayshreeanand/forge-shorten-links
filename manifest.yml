@@ -2,7 +2,7 @@ modules:
   macro:
     - key: shortened-link-generator
       function: main
-      title: shortened-link-generator
+      title: Short Link
       description: Generate shortened links!
   function:
     - key: main
