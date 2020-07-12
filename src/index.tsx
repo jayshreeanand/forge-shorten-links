@@ -13,17 +13,13 @@ import ForgeUI, {
 import { shortenUrl } from "./util";
 
 const defaultConfig = {
-  longUrl: "https://github.com/tanepiper/node-bitly",
+  longUrl: "",
 };
 
 const Config = () => {
   return (
     <ConfigForm>
-      <TextField
-        label="Input URL"
-        name="longUrl"
-        defaultValue="https://github.com/tanepiper/node-bitly"
-      />
+      <TextField label="Input URL" name="longUrl" defaultValue="" />
     </ConfigForm>
   );
 };
@@ -37,10 +33,8 @@ const App = () => {
 
   return (
     <Fragment>
-      <Text>Hello world!</Text>
-      <Fragment>
-        <Text content={shortUrl.link} />
-      </Fragment>
+      {longUrl == "" && <Text>Add/Edit URL in macro settings</Text>}
+      <Text content={shortUrl} />
     </Fragment>
   );
 };
