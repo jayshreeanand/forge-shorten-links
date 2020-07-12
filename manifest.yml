@@ -1,12 +1,12 @@
 modules:
   macro:
-    - key: forge-shortened-link-generator-hello-world
+    - key: shortened-link-generator
       function: main
-      title: forge-shortened-link-generator
-      description: Inserts Hello world!
+      title: shortened-link-generator
+      description: Generate shortened links!
   function:
     - key: main
       handler: index.run
 app:
-  id: 'ari:cloud:ecosystem::app/1282a9ee-4e98-40ba-809b-e4152037cc47'
-  name: forge-shortened-link-generator
+  id: "ari:cloud:ecosystem::app/1282a9ee-4e98-40ba-809b-e4152037cc47"
+  name: shortened-link-generator

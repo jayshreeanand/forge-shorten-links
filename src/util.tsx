@@ -1,7 +1,7 @@
 import { BitlyClient } from "bitly";
 import { BitlyLink } from "bitly/dist/types";
 import { stringify } from "querystring";
-const bitly = new BitlyClient(process.env.BITLY_GENERTIC_ACCESS_TOKEN, {});
+const bitly = new BitlyClient(process.env.BITLY_GENERIC_ACCESS_TOKEN, {});
 
 export const shortenUrl = async (longUrl: string): Promise<string> => {
   if (longUrl == "") {
