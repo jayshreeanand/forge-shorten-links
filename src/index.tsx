@@ -37,9 +37,7 @@ const App = () => {
     <Fragment>
       <Text>Hello world!</Text>
       <Fragment>
-        <a href={shortUrl} alt={shortUrl}>
-          {shortUrl}
-        </a>
+        <a href={shortUrl}>{shortUrl}</a>
       </Fragment>
     </Fragment>
   );
