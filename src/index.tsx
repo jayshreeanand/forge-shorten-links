@@ -7,9 +7,10 @@ import ForgeUI, {
   ConfigForm,
   Macro,
   Image,
+  useAction,
 } from "@forge/ui";
 
-import { generateShortenedUrl } from "./util";
+import bitlyGenerate from "./util";
 
 const defaultConfig = {
   longUrl: "https://github.com/tanepiper/node-bitly",
@@ -29,8 +30,11 @@ const Config = () => {
 
 const App = () => {
   const { longUrl } = useConfig();
-  // const daysLeft = daysTill(time);
-  const shortUrl = generateShortenedUrl(longUrl);
+  const shortUrl = bitlyGenerate(longUrl);
+  // const shortUrl = useAction(
+  //   (value) => value,
+  //   () => bitlyGenerate(longUrl)
+  // );
   return (
     <Fragment>
       <Text>Hello world!</Text>
