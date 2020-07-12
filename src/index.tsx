@@ -30,20 +30,16 @@ const Config = () => {
 
 const App = () => {
   const { longUrl } = useConfig();
-  var shortUrl = shortenUrl(longUrl);
-  // (async () => {
-  //   shortUrl = await bitlyGenerate(longUrl);
-  // })();
-  // const shortUrl = bitlyGenerate(longUrl);
+  const [shortUrl] = useAction(
+    async () => await shortenUrl(longUrl),
+    async () => await shortenUrl(longUrl)
+  );
+
   return (
     <Fragment>
       <Text>Hello world!</Text>
       <Fragment>
-        <Text
-          content={async (): string => {
-            return await shortenUrl(longUrl);
-          }}
-        />
+        <Text content={shortUrl.link} />
       </Fragment>
     </Fragment>
   );
