@@ -29,17 +29,18 @@
 import { BitlyClient } from "bitly";
 const bitly = new BitlyClient(process.env.BITLY_GENERTIC_ACCESS_TOKEN, {});
 
-export function generateshortedUrl(longUrl: string) {
+export function generateShortenedUrl(longUrl: string) {
   let bitlyResult = bitlyGenerate(longUrl).then((result) => {
     return result.url;
   });
+  return longUrl;
   // return bitlyResult.url;
 }
 
 async function bitlyGenerate(longUrl: string) {
   let result;
   try {
-    result = await bitly.shorten("https://github.com/tanepiper/node-bitly");
+    result = await bitly.shorten(longUrl);
   } catch (e) {
     throw e;
   }

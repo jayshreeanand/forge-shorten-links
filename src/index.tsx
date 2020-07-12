@@ -4,8 +4,6 @@ import ForgeUI, {
   Fragment,
   Text,
   TextField,
-  Select,
-  Option,
   ConfigForm,
   Macro,
   Image,
@@ -37,7 +35,7 @@ const App = () => {
     <Fragment>
       <Text>Hello world!</Text>
       <Fragment>
-        <a href={shortUrl}>{shortUrl}</a>
+        <Text>{shortUrl}</Text>
       </Fragment>
     </Fragment>
   );
